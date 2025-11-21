@@ -4,45 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debut</title>
+    <title>Noemi's Debut</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Scroll Animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fade-in stagger for masonry gallery */
+        .fade-stagger {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .fade-stagger:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .fade-stagger:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        .fade-stagger:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .fade-stagger:nth-child(4) {
+            animation-delay: 0.55s;
+        }
+
+        .fade-stagger:nth-child(5) {
+            animation-delay: 0.7s;
+        }
+
+        .fade-stagger:nth-child(6) {
+            animation-delay: 0.85s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Parallax hover effect */
+        .parallax-img {
+            transform: scale(1.1);
+            transition: transform 0.8s ease;
+        }
+
+        .parallax-wrapper:hover .parallax-img {
+            transform: scale(1.25) translateY(-8px);
+        }
+
+        /* Back to top button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f9e0e0;
+            color: #c53030;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, background 0.3s ease;
+            z-index: 50;
+        }
+
+        #backToTop:hover {
+            transform: translateY(-2px);
+            background-color: #fce4e4;
+        }
+    </style>
 </head>
 
-<body class="m-0 p-0">
+<body class="m-0 p-0 font-sans bg-rose-50">
 
     <!-- ============================= -->
     <!-- HERO / LANDING SECTION START -->
     <!-- ============================= -->
     <section class="relative h-screen w-full overflow-hidden">
 
-        <!-- Background Video (Full Screen) -->
-        <video class="absolute top-0 left-0 w-full h-full object-cover" src="hero-section.mp4" autoplay loop muted
-            playsinline>
-        </video>
+        <!-- Background Video -->
+        <video class="absolute top-0 left-0 w-full h-full object-cover" src="katsing.mp4" autoplay loop muted
+            playsinline poster="fallback-hero.jpg"></video>
 
-        <!-- Overlay Gradient (blush to rose gold) -->
+        <!-- Overlay Gradient -->
         <div
             class="absolute inset-0 bg-gradient-to-b from-rose-100/60 via-rose-200/40 to-rose-300/60 backdrop-blur-[1px]">
         </div>
 
         <!-- Centered Text Content -->
         <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
-            <!-- Subheading -->
-            <h2 class="text-2xl md:text-3xl font-light tracking-wide text-white/80 drop-shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-light tracking-wide text-white/80 drop-shadow-lg animate-fade-in"
+                data-aos="fade-down" data-aos-duration="1000">
                 You're Invited
             </h2>
-
-            <!-- Main Title -->
-            <h1 class="text-5xl md:text-7xl font-serif text-white font-semibold drop-shadow-xl mt-2">
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-semibold drop-shadow-xl mt-2 animate-fade-in"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 Noemi’s 18th Birthday Debut
             </h1>
-
-            <!-- Date & Venue -->
-            <p class="text-lg md:text-xl mt-4 text-white/90 drop-shadow-md">
+            <p class="text-lg md:text-xl mt-4 text-white/90 drop-shadow-md animate-fade-in" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="500">
                 November 27, 2025 • Prk.9, Brgy Linao, Kabankalan City
             </p>
-
         </div>
 
         <!-- Scroll Indicator -->
@@ -51,224 +120,218 @@
                 <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
             </div>
         </div>
-
     </section>
-    <!-- =========================== -->
-    <!-- HERO / LANDING SECTION END -->
-    <!-- =========================== -->
+    <!-- ============================= -->
+    <!-- HERO / LANDING SECTION START -->
+    <!-- ============================= -->
 
 
     <!-- ============================= -->
     <!-- ABOUT THE DEBUTANTE SECTION -->
     <!-- ============================= -->
-    <section class="relative w-full bg-rose-50 py-20 px-6 md:px-16">
+    <section class="relative w-full py-32 px-6 md:px-16" data-aos="fade-up" data-aos-duration="1200">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-        <!-- Section Container -->
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <!-- Video -->
+            <div class="relative rounded-3xl overflow-hidden shadow-xl">
+                <video class="w-full h-[420px] md:h-[500px] object-cover rounded-3xl" src="lookawi.mp4" autoplay loop
+                    muted playsinline poster="fallback-about.jpg"></video>
+                <img src="floral-lineart.png" alt=""
+                    class="absolute -top-6 -left-6 w-28 opacity-30 pointer-events-none select-none">
+            </div>
 
-            <!-- IMAGE SIDE -->
-            <!-- VIDEO SIDE -->
-<div class="relative rounded-3xl overflow-hidden shadow-xl">
-    <video 
-        class="w-full h-[420px] md:h-[500px] object-cover rounded-3xl" 
-        src="hero-section.mp4" 
-        autoplay 
-        loop 
-        muted 
-        playsinline>
-    </video>
-
-    <!-- Optional: Decorative Floral Line Art -->
-    <img src="floral-lineart.png" alt=""
-        class="absolute -top-6 -left-6 w-28 opacity-30 pointer-events-none select-none">
-</div>
-
-            <!-- TEXT SIDE -->
+            <!-- Text -->
             <div class="flex flex-col justify-center">
-                <h2 class="text-4xl md:text-5xl font-serif text-rose-900 mb-4">
+                <h2 class="text-4xl md:text-5xl font-serif text-rose-900 mb-6" data-aos="fade-right"
+                    data-aos-duration="1200">
                     Meet the Debutante
                 </h2>
-
-                <p class="text-rose-800/80 text-lg leading-relaxed mb-6">
+                <p class="text-rose-800/80 text-lg leading-relaxed mb-6" data-aos="fade-right" data-aos-delay="200">
                     Hello! I’m <span class="font-semibold text-rose-900">Noemi</span>.
                     Thank you for being part of this once-in-a-lifetime moment.
                     As I celebrate my 18th chapter, I’m grateful for the people, memories,
                     and love that helped shape who I am today.
                 </p>
-
-                <p class="text-rose-800/70 text-lg leading-relaxed">
+                <p class="text-rose-800/70 text-lg leading-relaxed" data-aos="fade-right" data-aos-delay="400">
                     This debut marks not just a milestone—but the beginning of a
                     new journey filled with dreams, courage, and purpose.
                 </p>
             </div>
-
         </div>
-
     </section>
     <!-- ============================= -->
-    <!-- END ABOUT SECTION -->
-    <!-- ============================= -->
-
+    <!-- ABOUT THE DEBUTANTE SECTION -->
     <!-- ============================= -->
 
 
     <!-- ============================= -->
     <!-- PHOTO GALLERY SECTION -->
     <!-- ============================= -->
-    <section class="w-full bg-rose-50 py-20 px-6 md:px-16">
-
-        <!-- Section Title -->
-        <div class="max-w-5xl mx-auto text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-serif text-rose-900">
-                Photo Gallery
-            </h2>
+    <section class="w-full py-20 px-6 md:px-16" data-aos="fade-up" data-aos-duration="1200">
+        <div class="max-w-5xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-rose-900">Photo Gallery</h2>
             <p class="text-rose-800/70 mt-3 text-lg">
                 A glimpse of beautiful moments captured along the way.
             </p>
         </div>
 
-        <!-- Masonry Photo Grid -->
-        <div class="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-
-            <!-- IMAGE 1 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+        <!-- Masonry Gallery -->
+        <div class="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-10 space-y-6">
+            <!-- Example Image -->
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image1.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 1" onclick="openLightbox(this)">
             </div>
-
-            <!-- IMAGE 2 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid -mt-6 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image2.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 2" onclick="openLightbox(this)">
             </div>
-
-            <!-- IMAGE 3 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid -mt-10 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image3.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 3" onclick="openLightbox(this)">
             </div>
-
-            <!-- IMAGE 4 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image4.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 4" onclick="openLightbox(this)">
             </div>
-
-            <!-- IMAGE 5 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image5.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 4" onclick="openLightbox(this)">
             </div>
-
-            <!-- IMAGE 6 -->
-            <div class="overflow-hidden rounded-3xl shadow-lg break-inside-avoid">
-                <img src="typing.jpg"
-                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110"
-                    alt="">
+            <div
+                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image6.jpg" loading="lazy"
+                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 4" onclick="openLightbox(this)">
             </div>
-
         </div>
-
     </section>
     <!-- ============================= -->
-    <!-- END PHOTO GALLERY SECTION -->
+    <!-- PHOTO GALLERY SECTION -->
     <!-- ============================= -->
-
 
 
     <!-- ============================= -->
     <!-- DEBUT DETAILS SECTION -->
     <!-- ============================= -->
-    <section class="w-full bg-rose-50 py-24 px-6 md:px-16">
-
-        <!-- Section Title -->
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-serif text-rose-900">
-                Event Details
-            </h2>
-            <p class="text-rose-800/70 mt-4 text-lg">
+    <section class="w-full py-32 px-8 md:px-20" data-aos="fade-up" data-aos-duration="1200">
+        <div class="text-center mb-28">
+            <h2 class="text-4xl md:text-5xl font-serif text-rose-900">Event Details</h2>
+            <p class="text-rose-800/70 mt-5 text-lg leading-relaxed">
                 All you need to know for Noemi's special day.
             </p>
         </div>
 
-        <!-- Cards Container -->
-        <div class="flex flex-col md:flex-row md:justify-center md:space-x-8 space-y-6 md:space-y-0">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
 
-            <!-- Date & Time Card -->
-            <div class="flex-1 bg-white/80 rounded-3xl shadow-lg p-8 text-center transition transform hover:scale-105">
-                <h3 class="text-2xl font-serif text-rose-900 mb-4">Date & Time</h3>
-                <p class="text-rose-800/90 text-lg">
-                    November 27, 2025 • 5:00 PM
-                </p>
+            <!-- Date & Time -->
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
+                data-aos-delay="100">
+                <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    Date & Time
+                </h3>
+                <p class="text-rose-800/90 text-lg leading-relaxed">November 27, 2025 • 5:00 PM</p>
             </div>
 
-            <!-- Venue Card -->
-            <div class="flex-1 bg-white/80 rounded-3xl shadow-lg p-8 text-center transition transform hover:scale-105">
-                <h3 class="text-2xl font-serif text-rose-900 mb-4">Venue</h3>
-                <p class="text-rose-800/90 text-lg">
-                    Prk. 9, Philippines
-                </p>
+            <!-- Venue -->
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
+                data-aos-delay="200">
+                <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 12l4.243-4.243a8 8 0 10-11.314 0l4.243 4.243-4.243 4.243a8 8 0 0011.314 0z" />
+                    </svg>
+                    Venue
+                </h3>
+                <p class="text-rose-800/90 text-lg leading-relaxed">Prk. 9, Philippines</p>
             </div>
 
-            <!-- Dress Code Card -->
-            <div class="flex-1 bg-white/80 rounded-3xl shadow-lg p-8 text-center transition transform hover:scale-105">
-                <h3 class="text-2xl font-serif text-rose-900 mb-4">Dress Code</h3>
-                <p class="text-rose-800/90 text-lg">
-                    Elegant • Light Colors • Pastels Preferred
-                </p>
+            <!-- Dress Code -->
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
+                data-aos-delay="300">
+                <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v6M12 14v4m0 0h-1m1 0h1m-4 0h1m2 0h2" />
+                    </svg>
+                    Dress Code
+                </h3>
+                <p class="text-rose-800/90 text-lg leading-relaxed">Elegant • Light Colors • Pastels Preferred</p>
             </div>
-
-            <!-- Theme Card -->
-            <div class="flex-1 bg-white/80 rounded-3xl shadow-lg p-8 text-center transition transform hover:scale-105">
-                <h3 class="text-2xl font-serif text-rose-900 mb-4">Event Theme</h3>
-                <p class="text-rose-800/90 text-lg">
-                    Soft Elegance • Blush Rose
-                </p>
-            </div>
-
         </div>
-
     </section>
     <!-- ============================= -->
-    <!-- END DEBUT DETAILS SECTION -->
+    <!-- DEBUT DETAILS SECTION -->
     <!-- ============================= -->
-
 
 
     <!-- ============================= -->
     <!-- FOOTER SECTION -->
     <!-- ============================= -->
-    <footer class="w-full bg-rose-100 py-10 px-6 md:px-20 mt-10">
-
+    <footer class="w-full py-16 px-6 md:px-20 bg-rose-100 relative">
         <div class="max-w-6xl mx-auto text-center">
-
-            <h3 class="text-2xl font-serif text-rose-900">
-                Thank you for celebrating with us
-            </h3>
-
-            <p class="text-rose-800/70 mt-3">
+            <h3 class="text-2xl font-serif text-rose-900" data-aos="fade-up">Thank you for celebrating with us</h3>
+            <p class="text-rose-800/70 mt-3" data-aos="fade-up" data-aos-delay="200">
                 We look forward to sharing this unforgettable night with you.
             </p>
-
-            <!-- Soft line -->
-            <div class="w-24 h-1 bg-rose-300/80 mx-auto mt-6 rounded-full"></div>
-
-            <p class="text-rose-800/60 mt-6 text-sm">
-                © 2025 Noemi’s Debut • Designed with Love
+            <div class="w-24 h-1 bg-rose-300/80 mx-auto mt-6 rounded-full" data-aos="fade-up" data-aos-delay="400">
+            </div>
+            <p class="text-rose-800/60 mt-6 text-sm" data-aos="fade-up" data-aos-delay="500">
+                © 2025 Noemi’s Debut • KnoXxx
             </p>
-
         </div>
-
     </footer>
-    <!-- ============================= -->
-    <!-- END FOOTER -->
-    <!-- ============================= -->
 
+    <!-- Back to Top Button -->
+    <div id="backToTop" onclick="scrollToTop()">↑ Top</div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+        <img id="lightboxImg" src="" class="max-h-[90vh] max-w-[90vw] rounded-xl">
+    </div>
+
+    <script>
+        AOS.init({
+            once: true
+        });
+
+        // Back to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Lightbox gallery
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(img) {
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>

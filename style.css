@@ -1,117 +1,67 @@
-/* === HERO SECTION STYLING === */
-.hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+        /* Fade-in stagger for masonry gallery */
+        .fade-stagger {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
 
-    /* classy serif + clean sans-serif mix */
-    font-family: 'Cormorant Garamond', serif;
-}
+        .fade-stagger:nth-child(1) {
+            animation-delay: 0.1s;
+        }
 
-/* Full-screen background video */
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(0.75) blur(1px); /* cinematic softness */
-}
+        .fade-stagger:nth-child(2) {
+            animation-delay: 0.25s;
+        }
 
-/* Gradient overlay (soft blush to rose-gold) */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-        rgba(255, 230, 240, 0.4),
-        rgba(255, 190, 210, 0.5)
-    );
-    mix-blend-mode: screen;
-}
+        .fade-stagger:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
-/* Centered text in the hero section */
-.hero-content {
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-}
+        .fade-stagger:nth-child(4) {
+            animation-delay: 0.55s;
+        }
 
-/* “You're Invited” subtle text */
-.invite-text {
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
+        .fade-stagger:nth-child(5) {
+            animation-delay: 0.7s;
+        }
 
-/* Main Debut Title */
-.debut-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255, 200, 220, 0.5);
-}
+        .fade-stagger:nth-child(6) {
+            animation-delay: 0.85s;
+        }
 
-/* Date & Venue details */
-.event-details {
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    opacity: 0.95;
-}
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* Scroll indicator at the bottom */
-.scroll-indicator {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 45px;
-    border: 2px solid white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+        /* Parallax hover effect */
+        .parallax-img {
+            transform: scale(1.1);
+            transition: transform 0.8s ease;
+        }
 
-/* The bouncing dot inside */
-.scroll-indicator span {
-    display: block;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    margin-top: 5px;
-    animation: bounce 1.5s infinite ease-in-out;
-}
+        .parallax-wrapper:hover .parallax-img {
+            transform: scale(1.25) translateY(-8px);
+        }
 
-/* Smooth bouncing animation */
-@keyframes bounce {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(20px); opacity: 0.5; }
-    100% { transform: translateY(0); opacity: 1; }
-}
+        /* Back to top button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f9e0e0;
+            color: #c53030;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, background 0.3s ease;
+            z-index: 50;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .debut-title {
-        font-size: 2.4rem;
-    }
-    .invite-text {
-        font-size: 1.3rem;
-    }
-    .event-details {
-        font-size: 1rem;
-    }
-}
+        #backToTop:hover {
+            transform: translateY(-2px);
+            background-color: #fce4e4;
+        }
