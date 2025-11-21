@@ -1,0 +1,117 @@
+/* === HERO SECTION STYLING === */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    /* classy serif + clean sans-serif mix */
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Full-screen background video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.75) blur(1px); /* cinematic softness */
+}
+
+/* Gradient overlay (soft blush to rose-gold) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        rgba(255, 230, 240, 0.4),
+        rgba(255, 190, 210, 0.5)
+    );
+    mix-blend-mode: screen;
+}
+
+/* Centered text in the hero section */
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+/* “You're Invited” subtle text */
+.invite-text {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+/* Main Debut Title */
+.debut-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 200, 220, 0.5);
+}
+
+/* Date & Venue details */
+.event-details {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.95;
+}
+
+/* Scroll indicator at the bottom */
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* The bouncing dot inside */
+.scroll-indicator span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    margin-top: 5px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Smooth bouncing animation */
+@keyframes bounce {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(20px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .debut-title {
+        font-size: 2.4rem;
+    }
+    .invite-text {
+        font-size: 1.3rem;
+    }
+    .event-details {
+        font-size: 1rem;
+    }
+}
