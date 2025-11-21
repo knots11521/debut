@@ -19,35 +19,15 @@
             animation: fadeUp 0.8s ease forwards;
         }
 
-        .fade-stagger:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .fade-stagger:nth-child(2) {
-            animation-delay: 0.25s;
-        }
-
-        .fade-stagger:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .fade-stagger:nth-child(4) {
-            animation-delay: 0.55s;
-        }
-
-        .fade-stagger:nth-child(5) {
-            animation-delay: 0.7s;
-        }
-
-        .fade-stagger:nth-child(6) {
-            animation-delay: 0.85s;
-        }
+        .fade-stagger:nth-child(1) { animation-delay: 0.1s; }
+        .fade-stagger:nth-child(2) { animation-delay: 0.25s; }
+        .fade-stagger:nth-child(3) { animation-delay: 0.4s; }
+        .fade-stagger:nth-child(4) { animation-delay: 0.55s; }
+        .fade-stagger:nth-child(5) { animation-delay: 0.7s; }
+        .fade-stagger:nth-child(6) { animation-delay: 0.85s; }
 
         @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Parallax hover effect */
@@ -70,7 +50,7 @@
             padding: 0.5rem 0.75rem;
             border-radius: 9999px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.2s ease, background 0.3s ease;
             z-index: 50;
         }
@@ -94,9 +74,7 @@
             playsinline poster="fallback-hero.jpg"></video>
 
         <!-- Overlay Gradient -->
-        <div
-            class="absolute inset-0 bg-gradient-to-b from-rose-100/60 via-rose-200/40 to-rose-300/60 backdrop-blur-[1px]">
-        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-100/60 via-rose-200/40 to-rose-300/60 backdrop-blur-[1px]"></div>
 
         <!-- Centered Text Content -->
         <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
@@ -122,9 +100,8 @@
         </div>
     </section>
     <!-- ============================= -->
-    <!-- HERO / LANDING SECTION START -->
+    <!-- HERO / LANDING SECTION END -->
     <!-- ============================= -->
-
 
     <!-- ============================= -->
     <!-- ABOUT THE DEBUTANTE SECTION -->
@@ -160,9 +137,8 @@
         </div>
     </section>
     <!-- ============================= -->
-    <!-- ABOUT THE DEBUTANTE SECTION -->
+    <!-- ABOUT THE DEBUTANTE SECTION END -->
     <!-- ============================= -->
-
 
     <!-- ============================= -->
     <!-- PHOTO GALLERY SECTION -->
@@ -176,50 +152,36 @@
         </div>
 
         <!-- Masonry Gallery -->
-        <div class="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-10 space-y-6">
-            <!-- Example Image -->
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image1.jpg" loading="lazy"
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+        <div class="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image1.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
                     alt="Gallery image 1" onclick="openLightbox(this)">
             </div>
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid -mt-6 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image2.jpg"
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image2.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
                     alt="Gallery image 2" onclick="openLightbox(this)">
             </div>
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid -mt-10 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image3.jpg" 
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image3.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
                     alt="Gallery image 3" onclick="openLightbox(this)">
             </div>
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image4.jpg"
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image4.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
                     alt="Gallery image 4" onclick="openLightbox(this)">
             </div>
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image5.jpg"
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
-                    alt="Gallery image 4" onclick="openLightbox(this)">
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image5.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 5" onclick="openLightbox(this)">
             </div>
-            <div
-                class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid mt-0 parallax-wrapper hover:shadow-2xl transition-all duration-500">
-                <img src="image6.jpg"
-                    class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
-                    alt="Gallery image 4" onclick="openLightbox(this)">
+            <div class="fade-stagger overflow-hidden rounded-3xl shadow-lg break-inside-avoid parallax-wrapper hover:shadow-2xl transition-all duration-500">
+                <img src="image6.jpg" class="parallax-img w-full h-auto object-cover brightness-95 hover:brightness-110 cursor-pointer"
+                    alt="Gallery image 6" onclick="openLightbox(this)">
             </div>
         </div>
     </section>
     <!-- ============================= -->
-    <!-- PHOTO GALLERY SECTION -->
+    <!-- PHOTO GALLERY SECTION END -->
     <!-- ============================= -->
-
 
     <!-- ============================= -->
     <!-- DEBUT DETAILS SECTION -->
@@ -233,13 +195,10 @@
         </div>
 
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
-
             <!-- Date & Time -->
-            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
-                data-aos-delay="100">
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
@@ -249,11 +208,9 @@
             </div>
 
             <!-- Venue -->
-            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
-                data-aos-delay="200">
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M17.657 16.657L13.414 12l4.243-4.243a8 8 0 10-11.314 0l4.243 4.243-4.243 4.243a8 8 0 0011.314 0z" />
                     </svg>
@@ -263,11 +220,9 @@
             </div>
 
             <!-- Dress Code -->
-            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up"
-                data-aos-delay="300">
+            <div class="space-y-3 hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="text-2xl font-serif text-rose-900 flex justify-center items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M16 11V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v6M12 14v4m0 0h-1m1 0h1m-4 0h1m2 0h2" />
                     </svg>
@@ -278,9 +233,8 @@
         </div>
     </section>
     <!-- ============================= -->
-    <!-- DEBUT DETAILS SECTION -->
+    <!-- DEBUT DETAILS SECTION END -->
     <!-- ============================= -->
-
 
     <!-- ============================= -->
     <!-- FOOTER SECTION -->
@@ -291,8 +245,7 @@
             <p class="text-rose-800/70 mt-3" data-aos="fade-up" data-aos-delay="200">
                 We look forward to sharing this unforgettable night with you.
             </p>
-            <div class="w-24 h-1 bg-rose-300/80 mx-auto mt-6 rounded-full" data-aos="fade-up" data-aos-delay="400">
-            </div>
+            <div class="w-24 h-1 bg-rose-300/80 mx-auto mt-6 rounded-full" data-aos="fade-up" data-aos-delay="400"></div>
             <p class="text-rose-800/60 mt-6 text-sm" data-aos="fade-up" data-aos-delay="500">
                 © 2025 Noemi’s Debut • KnoXxx
             </p>
@@ -308,16 +261,12 @@
     </div>
 
     <script>
-        AOS.init({
-            once: true
-        });
+        AOS.init({ once: true });
 
-        // Back to top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Lightbox gallery
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
 
@@ -332,6 +281,6 @@
             lightbox.classList.add('hidden');
         });
     </script>
-</body>
 
+</body>
 </html>
